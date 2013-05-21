@@ -27,6 +27,7 @@ public class CalabashApkBuilder {
         CalabashApkBuilder builder = new CalabashApkBuilder(out);
         builder.appZipFile(zipFile);
         builder.addDexFile(dexFile);
+        builder.close();
     }
 
     private JarOutputStream output;
