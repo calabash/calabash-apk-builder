@@ -8,9 +8,9 @@
   <target name="compile-classes" depends="clean">
     <javac srcdir="src" destdir="bin" />
   </target>
-  
+
   <target name="jar" depends="compile-classes">
-    <jar basedir="bin" destfile="CalabashApkBuilder.jar">
+    <jar basedir="bin" destfile="bin/CalabashApkBuilder.jar">
       <manifest>
         <attribute name="Main-Class" value="sh.calaba.apkbuilder.CalabashApkBuilder" />
       </manifest>
