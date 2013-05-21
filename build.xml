@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <project name="" default="jar" basedir=".">
+  <target name="clean">
+    <delete dir="bin" />
+    <mkdir dir="bin" />
+  </target>
+
+  <target name="compile-classes" depends="clean">
+    <javac srcdir="src" destdir="bin" />
+  </target>
+  
+  <target name="jar" depends="compile-classes">
+    <jar basedir="bin" destfile="CalabashApkBuilder.jar">
+      <manifest>
+        <attribute name="Main-Class" value="sh.calaba.apkbuilder.CalabashApkBuilder" />
+      </manifest>
+    </jar>
+  </target>
+
+</project>
